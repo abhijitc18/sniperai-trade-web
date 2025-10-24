@@ -1,0 +1,61 @@
+.clients-section {
+  padding: 8rem 1rem;
+  /* background: linear-gradient(90deg, #e3f0fd 78%, #e1ffe1 100%); */
+}
+
+.clients-header {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #223254;
+  margin-bottom: 6rem;
+}
+
+.swiper {
+  padding-bottom: 2.5rem;
+}
+
+.client-card {
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(44, 62, 80, 0.11);
+  width: 350px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.client-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.09);
+}
+
+.client-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #223254;
+}
+
+.client-profit {
+  font-weight: 500;
+  color: #2cc970;
+  margin-bottom: 0.5rem;
+  font-size: 1.02rem;
+}
+
+.client-quote {
+  font-style: italic;
+  font-size: 1.07rem;
+  color: #585a78;
+  margin-bottom: 0.7rem;
+}
+
+.star-rating {
+  color: #ffd700;
+  font-size: 1.2rem;
+}

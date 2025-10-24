@@ -1,0 +1,91 @@
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  padding: 4rem 1rem;
+  /* margin-top: 8rem; */
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(44, 62, 80, 0.08);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #223254;
+  margin-bottom: 0.8rem;
+}
+
+.contact-form label {
+  font-weight: 500;
+  color: #223254;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.6rem 1rem;
+  border-radius: 7px;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+  background: #f9fafd;
+  margin-bottom: 0.9rem;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form button {
+  background: linear-gradient(88deg, #2cc970 80%, #46aeff 105%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.85rem 2.2rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(88deg, #46aeff 80%, #2cc970 105%);
+}
+
+.success-msg {
+  margin-top: 1.2rem;
+  color: #2cc970;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .contact-section {
+    padding: 2rem 0.5rem;
+  }
+  .contact-form {
+    padding: 1.5rem 0.6rem;
+    max-width: 97vw;
+  }
+}
