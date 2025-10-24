@@ -20,7 +20,8 @@ const Navbar = () => {
         <img
           src={SniperLogo}
           alt="Sniper AI Logo"
-          style={{ height: "60px", width: "auto" }}
+          style={{ height: "60px", width: "auto", cursor: "pointer" }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         />
       </div>
       <ul className="nav-links">
