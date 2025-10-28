@@ -59,7 +59,9 @@ const clients = [
 
 const Clients = () => (
   <section id="clients" className="clients-section">
-    <h2 className="clients-header">Success Stories from Happy Clients</h2>
+    <div className="client-heading">
+      <h2 className="clients-header">Success Stories from Happy Clients</h2>
+    </div>
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={40}

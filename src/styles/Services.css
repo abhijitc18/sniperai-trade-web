@@ -1,14 +1,23 @@
 .services-section {
-  padding: 8rem 1rem;
+  padding: 1rem;
   /* background: linear-gradient(90deg, #f4fdff 78%, #accbee 100%); */
 }
 
-.services-header {
+.service-heading {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #223254;
-  margin-bottom: 6rem;
+}
+
+.services-section h2 {
+  background: #3f9483;
+  border-radius: 50px;
+  color: black;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
+  padding: 8px 20px;
+  text-transform: uppercase;
 }
 
 .services-grid {

@@ -26,7 +26,7 @@ const About = () => (
 
       <div className="social-icons">
         <a
-          href="https://www.linkedin.com/in/abhijit-chougule"
+          href="https://www.linkedin.com/in/vishal-yadav-a30833389"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -34,7 +34,7 @@ const About = () => (
           <FaLinkedin />
         </a>
         <a
-          href="https://www.instagram.com/abhijit_chougule"
+          href="https://www.instagram.com/v_i_s_h_a_l_5001/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -42,7 +42,7 @@ const About = () => (
           <FaInstagram />
         </a>
         <a
-          href="https://www.facebook.com/abhijit.chougule"
+          href="https://www.facebook.com/vishal.yadav.768602"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"

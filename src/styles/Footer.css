@@ -22,9 +22,13 @@
 
 .footer-column h3 {
   font-size: 1.15rem;
-  color: #ffe27a;
+  color: #3f9483;
   margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.footer-column h3:hover {
+  color: #ff6600;
 }
 
 .footer-column p,
@@ -41,13 +45,13 @@
 }
 
 .footer-social a {
-  color: #ffe27a;
+  color: #3f9483;
   font-size: 2rem;
   transition: color 0.3s;
 }
 
 .footer-social a:hover {
-  color: #46aeff;
+  color: #ff6600;
 }
 
 .map-container {

@@ -28,7 +28,18 @@ const services = [
 
 const Services = () => (
   <section id="services" className="services-section">
-    <h2 className="services-header">Services</h2>
+    <div className="service-heading">
+      <h2>Services</h2>
+      <p>
+        At SniperAI.trade, we empower traders with intelligent forex solutions
+        designed for success. Our Trading Signals provide precise, data-driven
+        insights to help you make confident market moves. Through Risk
+        Management, we guide you in protecting capital and optimizing
+        performance with disciplined strategies. And with Personal Coaching, our
+        experts offer one-on-one mentorship to help you master trading
+        psychology, strategy, and execution.
+      </p>
+    </div>
     <div className="services-grid">
       {services.map((service) => (
         <div className="service-card" key={service.title}>

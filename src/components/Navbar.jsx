@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
-import SniperLogo from "../assets/sniper_ai.jpeg";
+import SniperLogo from "../assets/sniperai_logo.png";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
