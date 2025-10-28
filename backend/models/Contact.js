@@ -1,4 +1,3 @@
-const { mixNumber } = require("framer-motion");
 const mongoose = require("mongoose");
 
 const ContactSchema = new mongoose.Schema(
@@ -7,8 +6,8 @@ const ContactSchema = new mongoose.Schema(
       type: "String",
       required: [true, "Name is required"],
       trim: true,
-      mixNumber: [3, "Name must be at least 3 characters"],
-      maxLength: [50, "Name cannot exceed 50 characters"],
+      minlength: [3, "Name must be at least 3 characters"],
+      maxlength: [50, "Name cannot exceed 50 characters"],
     },
     email: {
       type: "String",
@@ -16,7 +15,7 @@ const ContactSchema = new mongoose.Schema(
       trim: true,
       lowercase: true,
       match: [/.+@.+\..+/, "Please fill a valid email address"],
-      maxLength: [50, "Email cannot exceed 50 characters"],
+      maxlength: [50, "Email cannot exceed 50 characters"],
     },
     phone: {
       type: "String",
