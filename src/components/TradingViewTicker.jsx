@@ -33,8 +33,8 @@ const TradingViewTicker = () => {
 
   return (
     <div className="trading-view-ticker">
-      <div className="tradingview-widget-container" ref={container}>
-        <div className="tradingview-widget-container__widget"></div>
+      <div className="trading-view-ticker-container" ref={container}>
+        <div className="trading-view-ticker-container__widget"></div>
       </div>
     </div>
   );

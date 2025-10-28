@@ -14,10 +14,10 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <TradingViewTicker />
       <Navbar />
       <main>
         <HeroSlider />
-        <TradingViewTicker />
         <About />
         <Services />
         <TradingViewWidget />

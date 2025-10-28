@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import SniperLogo from "../assets/sniperai_logo.png";
