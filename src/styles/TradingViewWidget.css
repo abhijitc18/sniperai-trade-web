@@ -1,0 +1,30 @@
+.tradingview-widget-container {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 665px;
+  width: 100%;
+}
+
+.section-title {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.section-title h2 {
+  background: #3f9483;
+  border-radius: 50px;
+  color: black;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+
+.section-title h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 20px 0 0;
+}
