@@ -29,13 +29,16 @@ const ContactForm = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://sniperai-trade-web.onrender.com/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await res.json();
 
       if (res.ok) {
@@ -93,7 +96,7 @@ const ContactForm = () => {
           required
         />
         <ReCAPTCHA
-          sitekey="6LdTZfUrAAAAAIf-NXmLxLvnVxGLT9J8dwwRzyfY"
+          sitekey="6Lf14forAAAAAJ4wmSFphK_Z3tc-FEw8B1uycMI7"
           onChange={handleCaptcha}
         />
         <button type="submit">Send Message</button>
