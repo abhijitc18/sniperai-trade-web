@@ -9,8 +9,8 @@ router.post("/", async (req, res) => {
   console.log("Request body:", req.body);
   const { name, email, phone, message, captcha } = req.body;
 
-  if (!captcha)
-    return res.status(400).json({ error: "CAPTCHA verification failed" });
+  // if (!captcha)
+  //   return res.status(400).json({ error: "CAPTCHA verification failed" });
 
   // Verify CAPTCHA
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;

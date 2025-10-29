@@ -28,6 +28,8 @@ const ContactForm = () => {
       return;
     }
 
+    console.log("Submitting form", formData);
+
     try {
       const res = await fetch(
         "https://sniperai-trade-web.onrender.com/api/contact",
