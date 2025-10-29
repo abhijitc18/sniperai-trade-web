@@ -3,6 +3,7 @@ const router = express.Router();
 const Contact = require("../models/Contact");
 const nodemailer = require("nodemailer");
 const axios = require("axios");
+const qs = require("querystring");
 
 router.post("/", async (req, res) => {
   const { name, email, phone, message, captcha } = req.body;
@@ -12,10 +13,23 @@ router.post("/", async (req, res) => {
 
   // Verify CAPTCHA
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-  const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}`;
+
+  // const verifyURL = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${captcha}`;
 
   try {
-    const response = await axios.post(verifyURL);
+    const response = await axios.post(
+      "https://www.google.com/recaptcha/api/siteverify",
+      qs.stringify({
+        secret: secretKey,
+        response: captcha,
+      }),
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    );
+
     if (!response.data.success) {
       return res.status(400).json({ error: "CAPTCHA verification failed" });
     }
@@ -39,15 +53,18 @@ router.post("/", async (req, res) => {
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO_USER,
-    //   subject: "New Contact Form Submission",
-    //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
-    subject: "test mail",
+      //   subject: "New Contact Form Submission",
+      //   text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
+      subject: "test mail",
       text: "if you see this mail, then nodemailer is working fine",
     });
 
     res.status(200).json({ message: "Contact form submitted successfully" });
   } catch (error) {
-    console.error("Error processing contact form:", error);
+    console.error(
+      "Error processing contact form:",
+      error.response?.data || error.message || error
+    );
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
