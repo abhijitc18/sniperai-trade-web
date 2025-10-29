@@ -31,7 +31,10 @@ router.post("/", async (req, res) => {
       }
     );
 
+    console.log("reCAPTCHA verification response:", response.data);
+
     if (!response.data.success) {
+      console.log("reCAPTCHA error-codes:", response.data["error-codes"]);
       return res.status(400).json({ error: "CAPTCHA verification failed" });
     }
 
