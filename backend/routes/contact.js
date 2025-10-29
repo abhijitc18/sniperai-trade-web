@@ -6,6 +6,7 @@ const axios = require("axios");
 const qs = require("querystring");
 
 router.post("/", async (req, res) => {
+  console.log("Request body:", req.body);
   const { name, email, phone, message, captcha } = req.body;
 
   if (!captcha)
