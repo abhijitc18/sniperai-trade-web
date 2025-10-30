@@ -61,6 +61,9 @@ const ContactForm = () => {
     }
   };
 
+  const siteKey = process.env.REACT_APP_SITE_KEY;
+  // console.log(siteKey);
+
   return (
     <section id="contact" className="contact-section">
       <form className="contact-form" onSubmit={handleSubmit}>
@@ -97,10 +100,7 @@ const ContactForm = () => {
           placeholder="Your Message"
           required
         />
-        <ReCAPTCHA
-          sitekey="6Lf14forAAAAAJ4wmSFphK_Z3tc-FEw8B1uycMI7"
-          onChange={handleCaptcha}
-        />
+        <ReCAPTCHA sitekey={siteKey} onChange={handleCaptcha} />
         <button type="submit">Send Message</button>
         {success && <div className="success-msg">Thanks! I'll reply soon.</div>}
       </form>

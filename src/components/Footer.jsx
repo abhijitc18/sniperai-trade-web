@@ -63,7 +63,7 @@ const Footer = () => (
             <FaFacebook />
           </a>
           <a
-            href="https://www.linkedin.com/in/vishal-yadav-a30833389"
+            href="https://www.facebook.com/share/17Y48CN6gy/?mibextid=wwXIfr"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -74,8 +74,8 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-bottom">
-      &copy; {new Date().getFullYear()} Alivean Tech Solutoins | All rights
-      reserved.
+      Copyright &copy; {new Date().getFullYear()} All rights reserved | Design
+      and Developed by Alivean Tech Solutoins
     </div>
   </footer>
 );

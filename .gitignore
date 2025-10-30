@@ -10,6 +10,7 @@
 
 # Environment files
 /backend/.env
+.env
 
 # testing
 /coverage
