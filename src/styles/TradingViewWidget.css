@@ -10,17 +10,14 @@
   text-align: center;
 }
 
-.section-title h2 {
-  background: #3f9483;
-  border-radius: 50px;
-  color: black;
-  display: inline-block;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin: 0;
-  padding: 8px 20px;
-  text-transform: uppercase;
+.forex-widget-title {
+  position: relative;
+  font-size: 2.3rem;
+  color: #273144;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  margin-bottom: 55px;
+  text-align: center;
 }
 
 .section-title h3 {

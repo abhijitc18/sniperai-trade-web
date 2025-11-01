@@ -47,6 +47,14 @@ const Footer = () => (
         <h3>Connect Us</h3>
         <div className="footer-social">
           <a
+            href="https://www.linkedin.com/company/sniperai-trade/?viewAsMember=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin />
+          </a>
+          <a
             href="https://www.instagram.com/sniperai_trade/"
             target="_blank"
             rel="noopener noreferrer"
@@ -61,14 +69,6 @@ const Footer = () => (
             aria-label="Facebook"
           >
             <FaFacebook />
-          </a>
-          <a
-            href="https://www.facebook.com/share/17Y48CN6gy/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin />
           </a>
         </div>
       </div>

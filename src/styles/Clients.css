@@ -1,5 +1,5 @@
 .clients-section {
-  padding: 4rem 1rem;
+  padding: 7rem 1rem;
   /* background: linear-gradient(90deg, #e3f0fd 78%, #e1ffe1 100%); */
 }
 
@@ -11,17 +11,14 @@
   margin-bottom: 6rem; */
 }
 
-.client-heading h2 {
-  background: #3f9483;
-  border-radius: 50px;
-  color: black;
-  display: inline-block;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 4rem;
-  padding: 8px 20px;
-  text-transform: uppercase;
+.happy-clients-title {
+  position: relative;
+  font-size: 2.3rem;
+  color: #273144;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  margin-bottom: 55px;
+  text-align: center;
 }
 
 .swiper {

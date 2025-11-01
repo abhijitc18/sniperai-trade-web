@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import About from "./sections/About";
 import Services from "./sections/Services";
+import OurPartner from "./sections/OurPartner";
 import TradingViewWidget from "./components/TradingViewWidget";
 import Client from "./sections/Client";
 import Contact from "./sections/Contact";
@@ -20,6 +21,7 @@ function App() {
         <HeroSlider />
         <About />
         <Services />
+        <OurPartner />
         <TradingViewWidget />
         <Client />
         <Contact />

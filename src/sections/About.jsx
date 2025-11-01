@@ -7,7 +7,13 @@ import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 const About = () => (
   <section id="about" className="about-section">
     <div className="about-text">
-      <h2>About the Trader</h2>
+      <h2 className="about-title">
+        About the trader
+        <span className="angled-underline">
+          <span className="skew-bar"></span>
+          <span className="circle-dot"></span>
+        </span>
+      </h2>
       <p>
         Vishal Yadav is a seasoned Forex trader with over 10 years of experience
         managing high-value portfolios. With a deep understanding of market

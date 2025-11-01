@@ -60,7 +60,13 @@ const clients = [
 const Clients = () => (
   <section id="clients" className="clients-section">
     <div className="client-heading">
-      <h2 className="clients-header">Success Stories from Happy Clients</h2>
+      <h2 className="happy-clients-title">
+        Success Stories from Happy Clients
+        <span className="angled-underline">
+          <span className="skew-bar"></span>
+          <span className="circle-dot"></span>
+        </span>
+      </h2>
     </div>
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}

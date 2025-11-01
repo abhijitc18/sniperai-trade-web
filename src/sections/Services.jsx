@@ -29,7 +29,13 @@ const services = [
 const Services = () => (
   <section id="services" className="services-section">
     <div className="service-heading">
-      <h2>Services</h2>
+      <h2 className="services-title">
+        Services
+        <span className="angled-underline">
+          <span className="skew-bar"></span>
+          <span className="circle-dot"></span>
+        </span>
+      </h2>
       <p>
         At SniperAI.trade, we empower traders with intelligent forex solutions
         designed for success. Our Trading Signals provide precise, data-driven

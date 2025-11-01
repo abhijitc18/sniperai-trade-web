@@ -171,3 +171,34 @@ section {
   }
 }
 
+.angled-underline {
+  position: relative;
+  display: block;
+  height: 18px;
+  width: 120px;
+  margin: 14px auto 0 auto;
+}
+
+.skew-bar {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  height: 8px;
+  width: 100px;
+  background: linear-gradient(93deg, #24d366 0%, #2ea185 98%);
+  border-radius: 4px;
+  transform: skewX(-20deg);
+  box-shadow: 0 2px 12px rgba(36, 214, 102, 0.14);
+}
+
+.circle-dot {
+  position: absolute;
+  right: -8px;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+  background: #36bc9b;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(36, 214, 102, 0.18);
+  border: 2px solid #fff;
+}
