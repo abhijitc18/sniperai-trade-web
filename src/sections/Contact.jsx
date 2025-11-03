@@ -29,7 +29,7 @@ const ContactForm = () => {
     }
 
     console.log("Submitting form", formData);
-
+    // http://localhost:5000/api/contact // https://sniperai-trade-web.onrender.com/api/contact
     try {
       const res = await fetch(
         "https://sniperai-trade-web.onrender.com/api/contact",
@@ -62,7 +62,6 @@ const ContactForm = () => {
   };
 
   const siteKey = process.env.REACT_APP_SITE_KEY;
-  // console.log(siteKey);
 
   return (
     <section id="contact" className="contact-section">
