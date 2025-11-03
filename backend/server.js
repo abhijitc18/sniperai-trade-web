@@ -3,8 +3,14 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 require("dotenv").config();
+const helmet = require("helmet");
+const morgan = require("morgan");
+const compression = require("compression");
 
 const app = express();
+app.use(helmet());
+app.use(morgan("combined"));
+app.use(compression());
 app.use(cors());
 app.use(bodyParser.json());
 
