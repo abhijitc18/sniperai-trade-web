@@ -47,11 +47,24 @@ router.post("/", async (req, res) => {
 
     // Send Email Notification
     const transporter = nodemailer.createTransport({
-      service: "Gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      connectionTimeout: 10000,
+      logger: true,
+      debug: true,
+    });
+
+    transporter.verify(function (error, success) {
+      if (error) {
+        console.log("SMTP Connection error:", error);
+      } else {
+        console.log("SMTP Server is ready");
+      }
     });
 
     await transporter.sendMail({
