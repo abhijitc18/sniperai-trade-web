@@ -13,6 +13,16 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const menuItems = ["About", "Services", "Our Partners", "Clients", "Contact"];
+
+  const handleSmoothScroll = (e, id) => {
+    e.preventDefault();
+    const section = document.querySelector(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <nav className={`navbar fixed-top ${scrolled ? "navbar-scrolled" : ""}`}>
       <div className="logo">
@@ -24,16 +34,20 @@ const Navbar = () => {
         />
       </div>
       <ul className="nav-links">
-        {["About", "Services", "Clients", "Contact"].map((section) => (
-          <li key={section}>
-            <a
-              href={`#${section.toLowerCase()}`}
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              {section}
-            </a>
-          </li>
-        ))}
+        {menuItems.map((section) => {
+          const id = `#${section.toLowerCase().replace(/\s+/g, "-")}`;
+          return (
+            <li key={section}>
+              <a
+                href={id}
+                onClick={(e) => handleSmoothScroll(e, id)}
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                {section}
+              </a>
+            </li>
+          );
+        })}
       </ul>
       <button className="cta">Get Started</button>
     </nav>

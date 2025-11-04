@@ -35,6 +35,7 @@ const OurPartner = () => {
 
   return (
     <section
+      id="our-partners"
       className="partners-section"
       style={{ backgroundColor: "transparent" }}
     >
