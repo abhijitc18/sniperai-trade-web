@@ -6,11 +6,11 @@ const axios = require("axios");
 const qs = require("querystring");
 
 router.post("/", async (req, res) => {
-  console.log("Request body:", req.body);
+  // console.log("Request body:", req.body);
   const { name, email, phone, message, captcha } = req.body;
 
-  // if (!captcha)
-  //   return res.status(400).json({ error: "CAPTCHA verification failed" });
+  if (!captcha)
+    return res.status(400).json({ error: "CAPTCHA verification failed" });
 
   // Verify CAPTCHA
   const secretKey = process.env.RECAPTCHA_SECRET_KEY;
@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
   try {
     const response = await axios.post(
       "https://www.google.com/recaptcha/api/siteverify",
-      qs.stringify({
+      new URLSearchParams({
         secret: secretKey,
         response: captcha,
       }),
@@ -31,7 +31,7 @@ router.post("/", async (req, res) => {
       }
     );
 
-    // console.log("reCAPTCHA verification response:", response.data);
+    console.log("reCAPTCHA verification response:", response.data);
 
     if (!response.data.success) {
       // console.log("reCAPTCHA error-codes:", response.data["error-codes"]);
@@ -93,10 +93,7 @@ router.post("/", async (req, res) => {
 
     res.status(200).json({ message: "Contact form submitted successfully" });
   } catch (error) {
-    console.error(
-      "Error processing contact form:",
-      error.response?.data || error.message || error
-    );
+    console.error("Error during captcha verification:", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
