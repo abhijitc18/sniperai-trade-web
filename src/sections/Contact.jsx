@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import ReCAPTCHA from "react-google-recaptcha";
 import "../styles/Contact.css";
 
@@ -10,6 +11,7 @@ const ContactForm = () => {
     message: "",
     captcha: false,
   });
+
   const [success, setSuccess] = useState(false);
 
   const handleChange = (e) => {
@@ -28,6 +30,38 @@ const ContactForm = () => {
       return;
     }
 
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const userID = process.env.REACT_APP_USER_ID;
+
+    emailjs
+      .send(
+        serviceID,
+        templateID,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        userID
+      )
+      .then(() => {
+        // alert("Contact form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          captcha: false,
+        });
+        setSuccess(true);
+      })
+      .catch((err) => {
+        console.log("Failed to send contact form:", err);
+        alert("Something went wrong! Please try again.");
+      });
+
     console.log("Submitting form", formData);
     // http://localhost:5000/api/contact // https://sniperai-trade-web.onrender.com/api/contact
     try {
@@ -44,7 +78,7 @@ const ContactForm = () => {
       const data = await res.json();
 
       if (res.ok) {
-        alert("Contact Form submitted successfully");
+        alert("Contact form submitted successfully!");
         setFormData({
           name: "",
           email: "",
