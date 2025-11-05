@@ -46,61 +46,59 @@ router.post("/", async (req, res) => {
     // console.log("Seaving to MongoDB...");
 
     // Send Email Notification
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-      tls: { rejectUnauthorized: false },
-    });
+    //   const transporter = nodemailer.createTransport({
+    //     host: "smtp.gmail.com",
+    //     port: 587,
+    //     secure: false,
+    //     auth: {
+    //       user: process.env.EMAIL_USER,
+    //       pass: process.env.EMAIL_PASS,
+    //     },
+    //     tls: { rejectUnauthorized: false },
+    //   });
 
-    transporter.verify(function (error, success) {
-      if (error) {
-        console.log("SMTP Connection error:", error);
-      } else {
-        console.log("SMTP Server is ready");
-      }
-    });
+    //   transporter.verify(function (error, success) {
+    //     if (error) {
+    //       console.log("SMTP Connection error:", error);
+    //     } else {
+    //       console.log("SMTP Server is ready");
+    //     }
+    //   });
 
-    await transporter.sendMail({
-      from: `${name} <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_TO_USER,
-      subject: "New inquiry received",
-      html: `
-    <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f8; padding: 40px;">
-  <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+    //   await transporter.sendMail({
+    //     from: `${name} <${process.env.EMAIL_USER}>`,
+    //     to: process.env.EMAIL_TO_USER,
+    //     subject: "New inquiry received",
+    //     html: `
+          // <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f8; padding: 40px;">
+          //   <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden;">
+          //     <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; text-align: center; padding: 20px;">
+          //       <h2 style="margin: 0; font-size: 22px;">New Inquiry Received</h2>
+          //       <p style="margin: 5px 0 0; font-size: 14px;">You’ve got a new inquiry submission from your website</p>
+          //     </div>
 
-    <div style="background: linear-gradient(135deg, #3b82f6, #2563eb); color: white; text-align: center; padding: 20px;">
-      <h2 style="margin: 0; font-size: 22px;">New Inquiry Received</h2>
-      <p style="margin: 5px 0 0; font-size: 14px;">You’ve got a new inquiry submission from your website</p>
-    </div>
+          //     <div style="padding: 25px 30px; font-size: 16px;">
+          //       <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
+          //         <span style="color:#111; font-weight: 700;">👤: ${name}</span>
+          //       </div>
+          //       <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
+          //         <span style="color:#111; font-weight: 700;">📧: ${email}</span>
+          //       </div>
+          //       <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
+          //         <span style="color:#111; font-weight: 700;">📞: ${phone}</span>
+          //       </div>
+          //       <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: flex-start;">
+          //         <span style="color:#111; font-weight: 700;">💬: ${message}</span>
+          //       </div>
+          //     </div>
 
-    <div style="padding: 25px 30px; font-size: 16px;">
-      <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
-        <span style="color:#111; font-weight: 700;">👤: ${name}</span>
-      </div>
-      <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
-        <span style="color:#111; font-weight: 700;">📧: ${email}</span>
-      </div>
-      <div style="margin-bottom: 15px; display: flex; justify-content: space-between;">
-        <span style="color:#111; font-weight: 700;">📞: ${phone}</span>
-      </div>
-      <div style="margin-bottom: 15px; display: flex; justify-content: space-between; align-items: flex-start;">
-        <span style="color:#111; font-weight: 700;">💬: ${message}</span>
-      </div>
-    </div>
-
-    <div style="background-color: #f9fafb; text-align: center; padding: 15px; font-size: 13px; color: #777;">
-      <em>This email was generated automatically from your website’s contact form.</em>
-    </div>
-  </div>
-</div>
-
-  `,
-    });
+          //     <div style="background-color: #f9fafb; text-align: center; padding: 15px; font-size: 13px; color: #777;">
+          //       <em>This email was generated automatically from your website’s contact form.</em>
+          //     </div>
+          //   </div>
+          // </div>
+    // `,
+    //   });
 
     res.status(200).json({ message: "Contact form submitted successfully" });
   } catch (error) {
