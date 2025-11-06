@@ -1,7 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const Contact = require("../models/Contact");
-const nodemailer = require("nodemailer");
 const axios = require("axios");
 const qs = require("querystring");
 
