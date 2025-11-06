@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import About from "./sections/About";
@@ -11,20 +11,29 @@ import TradingViewTicker from "./components/TradingViewTicker";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
 import "./App.css";
+import PopupModel from "./components/PopupModal";
+import partners from "./data/partners";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className="App">
       <TradingViewTicker />
-      <Navbar />
+      <Navbar openModal={() => setShowModal(true)} />
       <main>
         <HeroSlider />
         <About />
         <Services />
-        <OurPartner />
+        <OurPartner openModal={() => setShowModal(true)} />
         <TradingViewWidget />
         <Client />
         <Contact />
+        <PopupModel
+          show={showModal}
+          onClose={() => setShowModal(false)}
+          partners={partners}
+        />
       </main>
       <FloatingButtons />
       <Footer />

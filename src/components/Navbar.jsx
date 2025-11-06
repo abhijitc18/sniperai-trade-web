@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import SniperLogo from "../assets/sniperai_logo.png";
 
-const Navbar = () => {
+const Navbar = ({ openModal }) => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -49,7 +49,9 @@ const Navbar = () => {
           );
         })}
       </ul>
-      <button className="cta">Get Started</button>
+      <button className="cta" onClick={openModal}>
+        Get Started
+      </button>
     </nav>
   );
 };

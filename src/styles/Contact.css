@@ -47,10 +47,12 @@
   background: #f9fafd;
   margin-bottom: 0.9rem;
   box-sizing: border-box;
+  resize: none !important;
+  transition: height 0.3s ease-in-out;
 }
 
 .contact-form textarea {
-  min-height: 100px;
+  min-height: unset;
   resize: vertical;
 }
 

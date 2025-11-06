@@ -136,7 +136,7 @@
   transform: translateY(-2px) scale(1.03);
 }
 
-.modal-overlay {
+/* .modal-overlay {
   position: fixed;
   inset: 0;
   background: rgba(44, 62, 80, 0.25);
@@ -215,4 +215,4 @@
 .close-modal-btn:hover {
   background: #24d366;
   color: #273144;
-}
+} */

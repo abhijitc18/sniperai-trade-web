@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import partners from "../data/partners";
 import "../styles/OurPartner.css";
-import { FaExternalLinkAlt } from "react-icons/fa";
 
-const OurPartner = () => {
+const OurPartner = ({ openModal }) => {
   const [showModal, setShowModal] = useState(false);
   const carouselRef = useRef(null);
 
@@ -12,7 +11,6 @@ const OurPartner = () => {
     let scrollAmount = 0;
     const slideWidth = 220; // Adjust for logo width plus margin
     const speed = 1; // px per frame
-
     let animationFrameId;
 
     const scrollCarousel = () => {
@@ -71,38 +69,9 @@ const OurPartner = () => {
       </p>
 
       {/* Button and Modal */}
-      <button className="open-account-btn" onClick={() => setShowModal(true)}>
+      <button className="open-account-btn" onClick={openModal}>
         Open an account with us
       </button>
-
-      {showModal && (
-        <div className="modal-overlay" onClick={() => setShowModal(false)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Choose Our Partner</h3>
-            <div className="partner-list">
-              {partners.map((p) => (
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  key={p.name}
-                  className="partner-list-item"
-                >
-                  <img src={p.logo} alt={p.name} className="modal-logo" />
-                  <span>{p.name}</span>
-                  <FaExternalLinkAlt className="external-icon" />
-                </a>
-              ))}
-            </div>
-            <button
-              onClick={() => setShowModal(false)}
-              className="close-modal-btn"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
     </section>
   );
 };
