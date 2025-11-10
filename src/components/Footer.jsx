@@ -1,6 +1,11 @@
 import React from "react";
 import "../styles/Footer.css";
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedin,
+  FaTelegramPlane,
+} from "react-icons/fa";
 
 const Footer = () => (
   <footer className="footer-section">
@@ -13,38 +18,21 @@ const Footer = () => (
           trading solutions and professional coaching.
         </p>
       </div>
-      {/* Google Map Integration */}
-      <div className="footer-column">
-        <h3>Google Map</h3>
-        <div className="map-container">
-          {/* Example location: Mumbai, India */}
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4732.798848507315!2d73.78565429999999!3d18.560545700000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf3719362a51%3A0x7181739e1e370b38!2sSniper%20AI!5e1!3m2!1sen!2sin!4v1760083446596!5m2!1sen!2sin"
-            width="100%"
-            height="150"
-            style={{ border: 0, borderRadius: "7px" }}
-            allowfullscreen=""
-            loading="lazy"
-            title="Office Location"
-          ></iframe>
-        </div>
-      </div>
+
       {/* Corporate Office */}
       <div className="footer-column">
-        <h3>Corporate Office</h3>
+        <h3>Address</h3>
         <address>
-          Sniper AI
+          473 Mundet Place
           <br />
-          Flat No A8, Floor No 2nd,
+          Hillside New Jersey
           <br />
-          Primrose, Block Sector, near Datta Mandir,
-          <br />
-          Baner, Pune, Maharashtra 411069
+          07205 United States
         </address>
       </div>
-      {/* Connect Us */}
+      {/* Follow On Us */}
       <div className="footer-column">
-        <h3>Connect Us</h3>
+        <h3>Follow On Us</h3>
         <div className="footer-social">
           <a
             href="https://www.linkedin.com/company/sniperai-trade/?viewAsMember=true"
@@ -70,6 +58,21 @@ const Footer = () => (
           >
             <FaFacebook />
           </a>
+          <a
+            href="https://t.me/sniperai_bot2025"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Telegram"
+          >
+            <FaTelegramPlane />
+          </a>
+        </div>
+      </div>
+      {/* Connect Us */}
+      <div className="footer-column">
+        <h3>Contact Us</h3>
+        <div className="map-container">
+          <p>sniperaitrade@gmail.com</p>
         </div>
       </div>
     </div>

@@ -2,7 +2,12 @@
 import React from "react";
 import "../styles/About.css";
 import aboutImg from "../assets/about-us.jpg";
-import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaTelegramPlane,
+} from "react-icons/fa";
 
 const About = () => (
   <section id="about" className="about-section">
@@ -32,7 +37,7 @@ const About = () => (
 
       <div className="social-icons">
         <a
-          href="https://www.linkedin.com/in/vishal-yadav-a30833389"
+          href="https://www.linkedin.com/company/sniperai-trade/?viewAsMember=true"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
@@ -40,7 +45,7 @@ const About = () => (
           <FaLinkedin />
         </a>
         <a
-          href="https://www.instagram.com/v_i_s_h_a_l_5001/"
+          href="https://www.instagram.com/sniperai_trade/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
@@ -48,12 +53,20 @@ const About = () => (
           <FaInstagram />
         </a>
         <a
-          href="https://www.facebook.com/vishal.yadav.768602"
+          href="https://www.facebook.com/profile.php?id=61580997666678"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
         >
           <FaFacebook />
+        </a>
+        <a
+          href="https://t.me/sniperai_bot2025"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Telegram"
+        >
+          <FaTelegramPlane />
         </a>
       </div>
     </div>
