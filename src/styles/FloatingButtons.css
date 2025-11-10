@@ -27,13 +27,36 @@
   background: #46aeff;
 }
 
-.whatsapp-btn {
-  bottom: 38px; /* Lower than top button */
+/* .whatsapp-btn {
+  bottom: 38px;
   background: #25d366;
 }
 
 .whatsapp-btn:hover {
   background: #128c7e;
+} */
+
+.telegram-btn {
+  background-color: #0088cc; /* Telegram blue */
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.telegram-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 136, 204, 0.5);
 }
 
 @media (max-width: 600px) {

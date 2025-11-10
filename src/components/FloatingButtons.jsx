@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../styles/FloatingButtons.css";
-import { FaArrowUp, FaWhatsapp } from "react-icons/fa";
+import { FaArrowUp, FaTelegramPlane } from "react-icons/fa";
 
-const whatsappNumber = "+918600815001"; // Use your WhatsApp number
+const telegramUsername = "+919579587848"; // Use your WhatsApp number
 
 const FloatingButtons = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -26,7 +26,7 @@ const FloatingButtons = () => {
           <FaArrowUp />
         </button>
       )}
-      <a
+      {/* <a
         className="floating-btn whatsapp-btn"
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
@@ -34,6 +34,15 @@ const FloatingButtons = () => {
         aria-label="WhatsApp Chat"
       >
         <FaWhatsapp />
+      </a> */}
+      <a
+        className="floating-btn telegram-btn"
+        href={`https://t.me/${telegramUsername}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Telegram Chat"
+      >
+        <FaTelegramPlane />
       </a>
     </>
   );
