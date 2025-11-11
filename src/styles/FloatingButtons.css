@@ -59,15 +59,17 @@
   box-shadow: 0 8px 20px rgba(0, 136, 204, 0.5);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .floating-btn {
     right: 16px;
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
+    bottom: 80px;
   }
   .top-btn {
-    bottom: 78px;
+    bottom: 130px;
+    border: #0088cc solid 1px;
   }
   .whatsapp-btn {
     bottom: 18px;

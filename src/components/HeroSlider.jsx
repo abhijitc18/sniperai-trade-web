@@ -9,9 +9,9 @@ import banner4 from "../assets/banner-4.jpeg";
 const slides = [
   {
     id: 1,
-    title: "Sniper AI - 4+ Years in Forex Trading",
-    subtext: "Managed $5M+ Portfolios",
-    cta: "Learn More",
+    title: "4+ Years of Proven Forex Performance",
+    subtext: "$5M+ Portfolios Managed",
+    cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner1}`,
       backgroundSize: "cover",
@@ -21,9 +21,9 @@ const slides = [
   },
   {
     id: 2,
-    title: "Expert Forex Services",
-    subtext: "Signals, Consultations, Training",
-    cta: "Get Started",
+    title: "Empowering Traders with AI Precision",
+    subtext: "Signals • Insights • Proven Results",
+    cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner2}`,
       backgroundSize: "cover",
@@ -33,8 +33,9 @@ const slides = [
   },
   {
     id: 3,
-    title: "200% Average Profit for Clients",
-    subtext: '"Quote from Client X"',
+    title: "Comprehensive Forex Solutions",
+    subtext:
+      '"Expert Signals | Personalized Consultations | Professional Training"',
     cta: "",
     backgroundStyle: {
       backgroundImage: `url(${banner3}`,
@@ -45,7 +46,7 @@ const slides = [
   },
   {
     id: 4,
-    title: "Ready to Trade? Contact Me!",
+    title: "Ready to Profit? Talk to Our Experts!",
     subtext: "",
     cta: "Reach Out",
     backgroundStyle: {

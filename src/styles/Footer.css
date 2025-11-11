@@ -69,7 +69,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     gap: 1.5rem;
@@ -78,5 +78,15 @@
   }
   .footer-column {
     min-width: 0;
+  }
+  .footer-column {
+    flex: 1 1 135px;
+    margin-bottom: 0;
+  }
+  .footer-column p {
+    text-align: justify;
+  }
+  .footer-bottom {
+    padding-top: 0;
   }
 }

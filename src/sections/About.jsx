@@ -13,26 +13,26 @@ const About = () => (
   <section id="about" className="about-section">
     <div className="about-text">
       <h2 className="about-title">
-        About the trader
+        About SniperAI
         <span className="angled-underline">
           <span className="skew-bar"></span>
           <span className="circle-dot"></span>
         </span>
       </h2>
       <p>
-        SniperAI is a seasoned Forex trader with over 10 years of experience
-        managing high-value portfolios. With a deep understanding of market
-        trends and risk management, Vishal consistently achieves outstanding
-        results for clients around the world.
+        SniperAI is an experienced Forex trader with over 10 years of expertise
+        in managing large portfolios. With strong knowledge of market trends and
+        risk control. We consistently delivers great results for clients
+        worldwide.
       </p>
       <p>
-        Our expertise includes trading signals, personalized coaching, and
-        market analysis to help traders of all levels succeed. He is passionate
-        about educating new traders and promoting disciplined trading practices.
+        Our services include trading signals, one-on-one coaching, and market
+        insights to help traders at every level grow. SniperAI is dedicated to
+        teaching beginners and encouraging disciplined trading habits.
       </p>
       <p>
-        Our commitment to transparency and client success has earned him
-        recognition as a trusted Forex expert in international markets.
+        Our focus on honesty and client success has made him a respected and
+        trusted Forex professional across global markets.
       </p>
 
       <div className="social-icons">
@@ -71,7 +71,7 @@ const About = () => (
       </div>
     </div>
     <div className="about-image">
-      <img src={aboutImg} alt="Vishal Yadav Forex Trader" />
+      <img src={aboutImg} alt="SniperAI Trade" />
     </div>
   </section>
 );

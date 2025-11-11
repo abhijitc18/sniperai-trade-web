@@ -4,7 +4,6 @@
   align-items: center;
   padding: 3rem 1rem;
   min-height: 60vh;
-  /* background-color: #f9f9f9; */
   background-color: #eff0f0;
 }
 
@@ -59,7 +58,6 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive tweaks */
 @media (max-width: 768px) {
   .about-section {
     flex-direction: column;
@@ -70,7 +68,27 @@
     flex: unset;
     padding: 0.5rem 0;
   }
+  .about-title {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
+  .about-text p {
+    text-align: justify;
+    font-size: 0.8rem;
+  }
   .social-icons {
     justify-content: center;
+  }
+  .social-icons a {
+    font-size: 1.5rem;
+  }
+
+   .about-image img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }

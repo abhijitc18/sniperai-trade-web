@@ -16,43 +16,43 @@ const stars = (n) => "★".repeat(n) + "☆".repeat(5 - n);
 
 const clients = [
   {
-    name: "Rajesh Kumar",
+    name: "Ravindra Chavan",
     image: client1,
     profit: "Achieved 150% ROI",
     quote:
-      "Abhijit's strategies helped me double my trading profits in just months.",
+      "Before Sniper AI, I lost money because of emotional trades. Now, every move is backed by analysis. My portfolio looks healthier than ever.",
     rating: 5,
   },
   {
-    name: "Priya Patel",
+    name: "Priti Patil",
     image: client2,
     profit: "Achieved 120% ROI",
     quote:
-      "The personalized coaching and signals were spot-on and easy to follow.",
+      "I’m new to trading, but the team guided me really well. The setup was simple, and within a month I started seeing profits.",
     rating: 4,
   },
   {
-    name: "Michael Lee",
+    name: "Vishal Phadtare",
     image: client3,
     profit: "Achieved 200% ROI",
     quote:
-      "Transparent, disciplined, and truly knowledgeable. Highly recommended!",
+      "I work full-time and can’t watch charts all day. The AI does everything automatically. I just check my results every evening — it’s that easy!",
     rating: 5,
   },
   {
-    name: "Michael Lee",
+    name: "Prajwal Singh",
     image: client3,
     profit: "Achieved 200% ROI",
     quote:
-      "Transparent, disciplined, and truly knowledgeable. Highly recommended!",
+      "I don’t have much time to trade manually. This system does it all for me. Sniper AI is like having a pro trader by your side — 24/7!",
     rating: 5,
   },
   {
-    name: "Michael Lee",
+    name: "Nikhil Choudhary",
     image: client3,
     profit: "Achieved 200% ROI",
     quote:
-      "Transparent, disciplined, and truly knowledgeable. Highly recommended!",
+      "This platform saves time and reduces stress. I don’t have to guess or panic anymore — everything is based on data.",
     rating: 5,
   },
 ];
