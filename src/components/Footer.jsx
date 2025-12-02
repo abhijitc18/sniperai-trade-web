@@ -78,7 +78,15 @@ const Footer = () => (
     </div>
     <div className="footer-bottom">
       Copyright &copy; {new Date().getFullYear()} All rights reserved | Design
-      and Developed by Alivean Tech Solutoins
+      and Developed by{" "}
+      <a
+        href="https://aliveantechsolutions.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="ats-link"
+      >
+        Alivean Tech Solutoins
+      </a>
     </div>
   </footer>
 );

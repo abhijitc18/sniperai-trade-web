@@ -6,6 +6,7 @@ import Services from "./sections/Services";
 import OurPartner from "./sections/OurPartner";
 import TradingViewWidget from "./components/TradingViewWidget";
 import Client from "./sections/Client";
+import Gallery from "./sections/Gallery";
 import Contact from "./sections/Contact";
 import TradingViewTicker from "./components/TradingViewTicker";
 import Footer from "./components/Footer";
@@ -28,6 +29,7 @@ function App() {
         <OurPartner openModal={() => setShowModal(true)} />
         <TradingViewWidget />
         <Client />
+        <Gallery />
         <Contact />
         <PopupModel
           show={showModal}

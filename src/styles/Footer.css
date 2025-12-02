@@ -68,6 +68,16 @@
   color: #aaa;
 }
 
+.ats-link {
+  font-weight: 700;
+  color: #24a6f1;
+  text-decoration: none;
+}
+
+.ats-link:hover {
+  text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {

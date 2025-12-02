@@ -7,7 +7,7 @@ const partners = [
   {
     name: "VT markets",
     logo: require("../assets/partners/partner-3.png"),
-    link: "https://www.vtmarkets.com/trade-now/?affid=900654",
+    link: "https://vtm.pro/ENVBRn",
   },
   {
     name: "Space World Capital",
