@@ -1,0 +1,53 @@
+.gallery-section {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.gallery-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-slide img {
+  height: 580px; /* approximate phone screenshot height */
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  padding: 0 14px; /* gap between images */
+  box-sizing: border-box;
+}
+
+.gallery-heading {
+  margin-bottom: 55px;
+}
+
+.gallery-title {
+  position: relative;
+  font-size: 2.3rem;
+  color: #273144;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gallery-slide img {
+    height: 640px;
+    width: auto;
+    border-radius: 10px;
+  }
+  .swiper-slide {
+    padding: 0 6px;
+  }
+  .gallery-title {
+    font-size: 1.3rem;
+  }
+}
