@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSlider from "./components/HeroSlider";
 import About from "./sections/About";
@@ -11,15 +12,16 @@ import Contact from "./sections/Contact";
 import TradingViewTicker from "./components/TradingViewTicker";
 import Footer from "./components/Footer";
 import FloatingButtons from "./components/FloatingButtons";
-import "./App.css";
 import PopupModel from "./components/PopupModal";
 import partners from "./data/partners";
+import Trader from "./sections/Trader";
+import "./App.css";
 
-function App() {
+function HomePage() {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="App">
+    <>
       <TradingViewTicker />
       <Navbar openModal={() => setShowModal(true)} />
       <main>
@@ -39,7 +41,23 @@ function App() {
       </main>
       <FloatingButtons />
       <Footer />
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Homepage */}
+          <Route path="/" element={HomePage} />
+
+          {/* Trader Landing Page */}
+          <Route path="/trader" element={<Trader />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
