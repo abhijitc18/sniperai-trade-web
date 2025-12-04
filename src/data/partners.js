@@ -1,13 +1,13 @@
 const partners = [
   {
+    name: "VT markets",
+    logo: require("../assets/partners/partner-3.png"),
+    link: "https://vtm.pro/6vmuEn",
+  },
+  {
     name: "XM",
     logo: require("../assets/partners/partner-1.png"),
     link: "https://clicks.pipaffiliates.com/c?c=1072070&l=en&p=1",
-  },
-  {
-    name: "VT markets",
-    logo: require("../assets/partners/partner-3.png"),
-    link: "https://vtm.pro/ENVBRn",
   },
   {
     name: "Space World Capital",

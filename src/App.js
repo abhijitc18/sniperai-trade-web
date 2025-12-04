@@ -51,7 +51,7 @@ function App() {
       <div className="App">
         <Routes>
           {/* Homepage */}
-          <Route path="/" element={HomePage} />
+          <Route path="/" element={<HomePage />} />
 
           {/* Trader Landing Page */}
           <Route path="/trader" element={<Trader />} />

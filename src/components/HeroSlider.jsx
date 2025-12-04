@@ -11,38 +11,38 @@ const slides = [
     id: 1,
     title: "4+ Years of Proven Forex Performance",
     subtext: "$5M+ Portfolios Managed",
-    cta: "",
+    cta: "Join Our Telegram Channel Now",
     backgroundStyle: {
       backgroundImage: `url(${banner1}`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
-    ctaLink: "#services",
+    ctaLink: "https://t.me/Sniperaitrade",
   },
   {
     id: 2,
     title: "Empowering Traders with AI Precision",
     subtext: "Signals • Insights • Proven Results",
-    cta: "",
+    cta: "Join Our Telegram Channel Now",
     backgroundStyle: {
       backgroundImage: `url(${banner2}`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
-    ctaLink: "#services",
+    ctaLink: "https://t.me/Sniperaitrade",
   },
   {
     id: 3,
     title: "Comprehensive Forex Solutions",
     subtext:
       '"Expert Signals | Personalized Consultations | Professional Training"',
-    cta: "",
+    cta: "Join Our Telegram Channel Now",
     backgroundStyle: {
       backgroundImage: `url(${banner3}`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
-    ctaLink: "",
+    ctaLink: "https://t.me/Sniperaitrade",
   },
   {
     id: 4,
@@ -79,7 +79,14 @@ const HeroSlider = () => {
           <h1>{slide.title}</h1>
           {slide.subtext && <p>{slide.subtext}</p>}
           {slide.cta && (
-            <a href={slide.ctaLink} className="cta-button">
+            <a
+              href={slide.ctaLink}
+              className="cta-button"
+              target={slide.ctaLink === "#contact" ? undefined : "_blank"}
+              rel={
+                slide.ctaLink === "#contact" ? undefined : "noopener noreferrer"
+              }
+            >
               {slide.cta}
             </a>
           )}

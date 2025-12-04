@@ -32,18 +32,13 @@ const Trader = () => {
         property="og:description"
         content="Real members, real profits. Join thousands already making money daily with our Forex & Crypto signals."
       />
-      <meta property="og:image" content={`${siteUrl}/trader-og.jpg`} />
+      {/* <meta property="og:image" content={`${siteUrl}/trader-og.jpg`} /> */}
       <meta property="og:url" content={pageUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="SniperAI" />
 
       {/* Canonical + Mobile + Robots */}
       <link rel="canonical" href={pageUrl} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
-
-      {/* Favicon */}
-      <link rel="icon" href="/favicon.ico" />
 
       {/* Structured Data (JSON-LD) for Better Google Understanding */}
       <script type="application/ld+json">
@@ -92,14 +87,14 @@ const Trader = () => {
               Visit SniperAI
             </a>
             <h1 className="hero-title">
-              Transform the way you
+              Trade Smarter.
               <br />
-              <span className="hero-highlight">invest your money!</span>
+              <span className="hero-highlight">Grow Your Money Faster.</span>
             </h1>
             <p className="hero-desc">
-              Make short-term investments in foreign exchange and
-              cryptocurrencies across global markets with data-driven entries,
-              tight risk control, and clear signal execution.
+              Access high-probability forex and crypto opportunities with
+              precise entries, controlled risk, and transparent signal execution
+              designed for consistent results.
             </p>
             <a
               href={telegramLink}
@@ -141,11 +136,11 @@ const Trader = () => {
         {/* Testimonials Section */}
         <section className="testimonials-section">
           <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Real Results from Real Traders</h2>
-              <div className="section-subtitle">
-                Traders from different backgrounds using the same clear signals
-                to build consistent weekly profits.
+            <div className="testm-header">
+              <h2 className="testm-title">Success Stories from Our Traders</h2>
+              <div className="testm-subtitle">
+                Real traders leveraging structured signals and precise risk
+                control to generate steady profits.
               </div>
             </div>
             <div className="testimonials-grid">
@@ -154,12 +149,13 @@ const Trader = () => {
                   <img src={FeedbackImg} alt="Trader success story" />
                 </div>
                 <div className="testimonial-meta">
-                  <span className="profit-badge">+233%</span>
+                  <span className="profit-badge">+187%</span>
                 </div>
                 <div className="testimonial-content">
                   <p>
-                    "I started with $300 and now I&apos;m already above $1000.
-                    The signals are clear, and risk is always under control."
+                    "Started with a small $400 test account and ended the week
+                    at $1,150 a clean 187% gain. The signal structure is
+                    systematic, risk-focused, and extremely easy to execute."
                   </p>
                 </div>
               </div>
@@ -169,12 +165,13 @@ const Trader = () => {
                   <img src={FeedbackImg} alt="Trader success story" />
                 </div>
                 <div className="testimonial-meta">
-                  <span className="profit-badge">+$500</span>
+                  <span className="profit-badge">+92%</span>
                 </div>
                 <div className="testimonial-content">
                   <p>
-                    "Amazing signals, my friend. I made $500 in one session.
-                    Entries are accurate and easy to follow."
+                    "Put $600 into a new setup and closed the week at $1,150 a
+                    sharp 92% return. Entries are precise, updates are timely,
+                    and execution stays completely stress-free."
                   </p>
                 </div>
               </div>
@@ -184,12 +181,13 @@ const Trader = () => {
                   <img src={FeedbackImg} alt="Trader success story" />
                 </div>
                 <div className="testimonial-meta">
-                  <span className="profit-badge">+300%</span>
+                  <span className="profit-badge">+$430</span>
                 </div>
                 <div className="testimonial-content">
                   <p>
-                    "Deposited $500 five days ago and today I already have
-                    $2000. Great risk management and powerful signals."
+                    "Made a clean $430 in a single session using the intraday
+                    signals. Clear confirmations, tight stops, and fast momentum
+                    breakouts made the trade flow smoothly."
                   </p>
                 </div>
               </div>
