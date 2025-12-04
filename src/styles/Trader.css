@@ -1,0 +1,376 @@
+.trader-page {
+  background: #0a0e17;
+  color: #fff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  max-width: 100% !important;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 14, 23, 0.85) 0%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #00d4ff, #43c7f7);
+  color: #000;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 100px;
+  background: linear-gradient(135deg, #fff 0%, #e0f2fe 50%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-highlight {
+  display: block;
+  background: linear-gradient(135deg, #00d4ff, #43c7f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-desc {
+  font-size: 1.3rem;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #00d4ff 0%, #43c7f7 100%);
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 18px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.5);
+}
+
+.hero-cta svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.hero-cta:hover svg {
+  transform: translateX(4px);
+}
+
+.hero-about-sniperai {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  text-align: center;
+  color: #c6d4ff;
+  font-size: 0.98rem;
+}
+
+.hero-about-sniperai h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero-about-sniperai p {
+  margin-bottom: 8px;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 10px 0;
+  /* background: linear-gradient(180deg, #0f1622 0%, #0a0e17 100%); */
+  background: transparent;
+  position: relative;
+  z-index: 3;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 0%, #e0f2fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #a0b0c0;
+  font-weight: 400;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #00d4ff, #43c7f7, #00d4ff);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.testimonial-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 32px 80px rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-content {
+  position: relative;
+  text-align: center;
+}
+
+.testimonial-meta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.profit-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  background: linear-gradient(135deg, #00d4ff, #43c7f7);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 16px rgba(0, 212, 255, 0.45);
+}
+
+.testimonial-content p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+/* CTA Section */
+.section-cta {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #00d4ff 0%, #43c7f7 100%);
+  color: #000;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 18px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.5);
+}
+
+/* Disclaimer */
+.disclaimer-section {
+  padding: 80px 0;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 3;
+}
+
+.disclaimer-text {
+  display: block;
+  text-align: center;
+  font-size: 0.6rem;
+  margin-bottom: 10px;
+}
+
+.disclaimer-section p {
+  font-size: 0.9rem;
+  color: #a0b0c0;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+  .hero-content {
+    top: 30px;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+    margin-bottom: 50px;
+  }
+  .hero-desc {
+    font-size: 1rem;
+    text-align: justify;
+    margin-bottom: 50px;
+  }
+  .hero-about-sniperai {
+    margin-bottom: 50px;
+    font-size: 0.8rem;
+    text-align: justify;
+  }
+  .testimonials-section {
+    padding: 20px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .testimonial-card {
+    padding: 20px;
+  }
+  .testimonial-content p{
+    font-size: 1rem;
+  }
+  .section-cta{
+    margin-bottom: 2rem;
+  }
+  .disclaimer-section{
+    padding: 40px 0;
+  }
+  .disclaimer-text{
+    font-size: 0.35rem;
+    padding: 0 20px 0 20px;
+  }
+}
